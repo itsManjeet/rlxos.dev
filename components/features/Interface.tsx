@@ -7,7 +7,7 @@ const features = [
   {
     name: "Fast and responsive",
     description:
-      "A beautiful, lightweight and highly Xfce4 desktop environment to boost your productivity.",
+      "A beautiful, lightweight and highly customizable Xfce4 desktop environment to boost your productivity.",
     icon: BoltIcon,
   },
   {
