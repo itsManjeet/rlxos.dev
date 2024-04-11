@@ -2,7 +2,7 @@
 #
 # To get started with Next.js see: https://nextjs.org/docs/getting-started
 #
-name: Deploy Next.js site to Pages
+name: Create release
 
 on:
   # Runs on pushes targeting the default branch
@@ -57,11 +57,13 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Create Archive
         run: tar -caf deploy-ready.tar.xz -C ./out .
-      - uses: "marvinpinto/action-automatic-releases@latest"
+      - name: Upload binaries to release
+        uses: svenstaro/upload-release-action@v2
         with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "latest"
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: deploy-ready.tar.xz
+          asset_name: deploy-ready.tar.xz
+          tag: continuous
+          overwrite: true
           prerelease: true
-          title: "Development Build"
-          files: deploy-ready.tar.xz
 
