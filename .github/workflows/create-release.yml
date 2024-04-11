@@ -63,7 +63,6 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: deploy-ready.tar.xz
           asset_name: deploy-ready.tar.xz
-          tag: continuous
+          tag: deploy-ready
           overwrite: true
-          prerelease: true
 
