@@ -9,6 +9,7 @@ import Image from "next/image";
 const navigation = [
   {name: "Home", href: "/"},
   {name: "Handbook", href: "https://docs.rlxos.dev"},
+  {name: "Blog", href: "https://blog.rlxos.dev"},
   {name: "Community", href: "https://github.com/itsManjeet/rlxos/discussions"},
 ];
 
