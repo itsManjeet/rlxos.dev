@@ -31,11 +31,7 @@ export default function Interface() {
                 Easy to use
               </p>
               <p className="mt-6 text-lg leading-8 text-gray-600">
-                Improved user experience and interface design inspired by the
-                most beautiful{" "}
-                <a href={"https://elementary.io/"}>
-                  <u>Elementary OS</u>
-                </a>
+                Improved user experience and interface design
               </p>
               <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
                 {features.map((feature) => (
